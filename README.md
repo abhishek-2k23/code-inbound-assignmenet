@@ -1,4 +1,4 @@
-# Customer Satisfaction Survey Kiosk
+# Customer Satisfaction Survey 
 
 This is a responsive survey application built using **React.js** with **Tailwind CSS** for styling and **Redux** for state management. The application is intended for use in a kiosk within a shop to collect customer feedback.
 
