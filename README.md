@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Customer Satisfaction Survey Kiosk
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a responsive survey application built using **React.js** with **Tailwind CSS** for styling and **Redux** for state management. The application is intended for use in a kiosk within a shop to collect customer feedback.
 
-## Available Scripts
+## Live URL 
+- [https://code-inbound-assignment.vercel.app/]
 
-In the project directory, you can run:
+## Table of Contents
+- [Features](#Features)
+- [Technologies Used](#Technologies-Used)
+- [Screenshots](#Screenshots)
+- [Styling](#Stying)
+- [Installation](#installation)
+- [Folder Structure](#folder-structure)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- A welcome screen to greet customers.
+- A series of 5 survey questions with different input types:
+  1. Rating (1-5) for product satisfaction.
+  2. Rating (1-5) for price fairness.
+  3. Rating (1-5) for value-for-money satisfaction.
+  4. Rating (1-10) for likelihood of recommending the shop.
+  5. Text input for suggestions on improving the service.
+- User can navigate back and forth between questions and skip any question.
+- Answers are stored locally using **localStorage**.
+- Upon survey completion, users are prompted to submit their responses.
+- After submission, a confirmation screen thanks the user, followed by a redirection back to the welcome screen.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React.js**: For building the frontend user interface.
+- **Tailwind CSS**: For responsive and modern styling.
+- **Redux**: For state management.
+- **localStorage**: For persisting survey responses.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Styling
+- For the styling Tailwind Css is used
 
-### `npm run build`
+## Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Welcome screen](./src/Screenshots/welcome.png)
+![Survery Screen](./src/Screenshots/survey.png)
+![Answer selected](./src/Screenshots/answer-selected.png)
+![Thank you screen](./src/Screenshots/thankyou-screen.png)
+## Installation and Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- **Node.js**: Ensure you have Node.js installed. You can download it [here](https://nodejs.org/).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steps to run the project locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/abhishek-2k23/code-inbound-assignmenet.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Folder Structure
+src/
+│
+├── components/
+│   ├── WelcomeScreen.js
+│   ├── SurveyScreen.js
+│   └── ThankYouScreen.js
+│
+├── redux/
+│   ├── store.js
+│   └── surveySlice.js
+│
+├── data/
+│   └── questions.js
+│
+└── App.js
