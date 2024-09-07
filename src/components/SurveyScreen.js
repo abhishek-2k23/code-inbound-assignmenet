@@ -50,13 +50,14 @@ const SurveyScreen = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen px-4">
-      <div className="p-6 md:p-10 bg-blue-500 shadow-lg rounded-lg text-white w-full max-w-xl">
-        <h2 className="text-2xl mb-4 text-center">{`Question ${currentQuestionIndex + 1} / ${questions.length}`}</h2>
-        <p className="mb-4 text-center">{currentQuestion.question}</p>
+      <div className="p-6 md:p-10 bg-blue-300 shadow-lg rounded-3xl border border-gray-500 text-black w-full max-w-lg ">
+        <h2 className="text-xl mb-4 text-center ">Customer Survey</h2>
+        <h2 className="text-xl mb-4 text-end ">{` ${currentQuestionIndex + 1}/${questions.length}`}</h2>
+        <p className="mb-4 text-center">{`${currentQuestionIndex + 1}. ${currentQuestion.question}`}</p>
 
         {/* Rating question */}
         {currentQuestion.type === 'rating' && (
-          <div className="flex justify-center space-x-2 mb-4 flex-wrap gap-3 md:gap-0">
+          <div className="flex justify-center space-x-2 space-y-2 mb-4 flex-wrap gap-3 md:gap-0">
             {Array.from({ length: currentQuestion.scale }).map((_, index) => {
               const ratingValue = index + 1;
               const isSelected = answers[currentQuestion.id] === ratingValue;
@@ -91,14 +92,14 @@ const SurveyScreen = () => {
         <div className="mt-6 flex justify-between w-full">
           <button 
             onClick={handlePrevious} 
-            className="p-2 bg-blue-300 rounded-md w-24 disabled:bg-gray-400" 
+            className="p-2 bg-blue-500 text-white rounded-md w-24 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:border disabled:border-gray-300" 
             disabled={currentQuestionIndex === 0}
           >
-            Previous
+            Prev
           </button>
           <button 
             onClick={handleNext} 
-            className="p-2 bg-blue-600 text-white rounded-md w-24"
+            className="p-2 bg-pink-500 text-white rounded-md w-24"
           >
             {currentQuestionIndex === questions.length - 1 ? 'Submit' : 'Next'}
           </button>

@@ -8,7 +8,7 @@ const App = () => {
   const { isCompleted, welcomeScreen } = useSelector((state) => state.survey);
 
   return (
-    <div className="App bg-blue-500 " >
+    <div className="App bg-blue-300 " >
       {
         welcomeScreen ? <WelcomeScreen /> : isCompleted ? <ThankYouScreen /> : <SurveyScreen />
       }
